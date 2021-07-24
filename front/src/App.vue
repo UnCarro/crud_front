@@ -1,17 +1,28 @@
 <template>
   <div id="app">
-    <uploader />
+    <Header title="CRUD Try"/>
+   
+    <router-view/>
+
   </div>
 </template>
 
 <script>
-import uploader from "./components/uploader.vue";
+import Vue from 'vue'
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+import Header from './components/Header.vue'
 
-export default {
-  name: "app",
+Vue.use(BootstrapVue)
+Vue.use(IconsPlugin)
+
+export default({
+  name: 'app',
   components: {
-    uploader,
-  },
-};
+    Header
+  }
+})
 </script>
+
 
